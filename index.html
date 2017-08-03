@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>Настроение</title>
+  <script type="text/javascript">
+  function changeQuote() {
+      var quote = document.getElementById('quote')
+      quote.text = 'Any phrase'
+  }
+</script>
   <script id="quotes_json" type="application/json">
     [
       {
@@ -22,6 +28,6 @@
   </script>
 </head>
 <body>
-<h1>Hello, humans!)</h1>
+<h1 id="quote">Hello, humans!)</h1>
 </body>
 </html>
