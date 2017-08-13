@@ -2,11 +2,12 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Настроение</title>
+  <title>Сайт-вдохновение</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <script type="text/javascript">
   function changeQuote() {
-      var quote = document.getElementById('quote')
-      quote.text = 'Any phrase'
+      var quote = document.getElementById("quote")
+      quote.innerHTML = 'Any phrase'
   }
 </script>
   <script id="quotes_json" type="application/json">
@@ -27,7 +28,9 @@
     ]
   </script>
 </head>
-<body>
-<h1 id="quote">Hello, humans!)</h1>
+<body style="background-color: khaki">
+  <div id="container">
+    <h1 id="quote">Make the world a better place</h1>
+  </div>
 </body>
 </html>
