@@ -4,29 +4,11 @@
   <meta charset="utf-8">
   <title>Сайт-вдохновение</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <script type="text/javascript">
-  function changeQuote() {
-      var quote = document.getElementById("quote")
-      quote.innerHTML = 'Any phrase'
-  }
-</script>
-  <script id="quotes_json" type="application/json">
-    [
-      {
-        "phrase": "Кукурузные хлопья - теперь без асбеста!",
-        "signature": "©Неизвестный маркетолог"
-      },
-      {
-        "phrase": "Собираюсь жить вечно, пока всё идёт нормально"
-      },
-      {
-        "phrase": "Вывеска над кафе — '\u003cМы открылись\u003e'. Что-то не так. Где же '\u003c/Мы открылись\u003e'?"
-      },
-      {
-        "phrase": "Если ты будешь усердно работать по 8 часов в день, то обязательно станешь боссом и начнешь работать по 12"
-      }
-    ]
-  </script>
+  <script src="changequote.js">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"</script>
 </head>
 <body style="background-color: khaki">
   <div id="container">
