@@ -3,16 +3,46 @@
 <head>
   <meta charset="utf-8">
   <title>Сайт-вдохновение</title>
+  <script type="text/javascript">
+    var quotes = [
+      {
+        "phrase": "Кукурузные хлопья - теперь без асбеста!",
+        "signature": "©Неизвестный маркетолог"
+      },
+      {
+        "phrase": "Собираюсь жить вечно, пока всё идёт нормально"
+      },
+      {
+        "phrase": "Вывеска над кафе — '\u003cМы открылись\u003e'. Что-то не так. Где же '\u003c/Мы открылись\u003e'?"
+      },
+      {
+        "phrase": "Если ты будешь усердно работать по 8 часов в день, то обязательно станешь боссом и начнешь работать по 12"
+      }
+    ]
+  </script>
+  <script type="text/javascript">
+    function changequote() {
+      var quote = document.getElementById("quote");
+      var quote_footer = document.getElementById("quote-footer");
+      var item = quotes[Math.floor(Math.random() * quotes.length)];
+      quote.innerHTML = item["phrase"];
+      quote_footer.innerHTML = item['signature'];
+    }
+  </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="changequote.js"></script>
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
 </head>
-<body style="background-color: khaki">
-  <div id="container">
-    <h1 id="quote">Make the world a better place</h1>
+<body onload="changequote()">
+  <div class="container">
+    <!--TODO FIX blockquote issue-->
+    <blockquote class="blockquote blockquote-reverse">
+      <p id="quote">Make the world a better place</p>
+      <footer id="quote-footer" class="blockquote-footer"></footer>
+    </blockquote>
   </div>
-</body>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
 </html>
