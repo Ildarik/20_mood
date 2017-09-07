@@ -13,36 +13,41 @@
         "phrase": "Собираюсь жить вечно, пока всё идёт нормально"
       },
       {
-        "phrase": "Вывеска над кафе — '\u003cМы открылись\u003e'. Что-то не так. Где же '\u003c/Мы открылись\u003e'?"
+        "phrase": "Если ты будешь усердно работать по 8 часов в день, то обязательно станешь боссом и начнешь работать по 12"
       },
       {
-        "phrase": "Если ты будешь усердно работать по 8 часов в день, то обязательно станешь боссом и начнешь работать по 12"
+        "phrase": "Скупой платит дважды!"
+      },
+      {
+        "phrase": "И туган тель, и матур тель...",
+        "signature": "Габдулла Тукай"
       }
     ]
   </script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript">
     function changequote() {
       var quote = document.getElementById("quote");
       var quote_footer = document.getElementById("quote-footer");
       var item = quotes[Math.floor(Math.random() * quotes.length)];
       quote.innerHTML = item["phrase"];
-      quote_footer.innerHTML = item['signature'];
+      if (item['signature'] !== undefined) {
+        quote_footer.innerHTML = item['signature'];
+      } else {
+        quote_footer.style.display = 'none';
+      }
     }
   </script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body onload="changequote()">
+<body style="background-color: lightsteelblue" onload="changequote()">
   <div class="container">
-    <!--TODO FIX blockquote issue-->
-    <blockquote class="blockquote blockquote-reverse">
+    <blockquote class="blockquote">
       <p id="quote">Make the world a better place</p>
       <footer id="quote-footer" class="blockquote-footer"></footer>
     </blockquote>
   </div>
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </body>
 </html>
