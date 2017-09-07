@@ -1,8 +1,6 @@
 # Site for the Mood
 
-[TODO. There will be project description]
-
-[TODO. Freeze requirements]
+Simple webpage with funny quotes. 
 
 # Project Goals
 
